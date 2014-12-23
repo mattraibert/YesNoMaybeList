@@ -39,6 +39,7 @@ group :development do
   gem 'binding_of_caller'
 end
 
+gem 'simplecov', :require => false, :group => :test
 # Use unicorn as the app server
 # gem 'unicorn'
 
