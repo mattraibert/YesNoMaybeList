@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'home#index'
   get 'signup', to: 'users#new', as: :signup
   post '/users', to: 'users#create'
+  get '/users/:id', to: 'users#show', as: :user
   get 'login', to: 'sessions#new', as: :login
   post '/sessions', to: 'sessions#create', as: :sessions
   delete 'logout', to: 'sessions#destroy', as: :logout
