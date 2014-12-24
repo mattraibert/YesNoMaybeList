@@ -17,7 +17,8 @@ Rails.application.routes.draw do
   post 'reset_password',        to: 'password_resets#create'
   patch 'reset_password/edit/', to: 'password_resets#edit',       as: :edit_password_reset
 
-  
+  #ACTIVITIES
+  post 'activities/add',        to: 'activities#create',          as: :add_activity
 
   #resources :password_resets
   #resources :users

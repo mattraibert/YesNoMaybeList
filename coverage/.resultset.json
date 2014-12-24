@@ -1,6 +1,10 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/katefulton/Documents/ADA/BREAK/YesNoMaybe/app/helpers/activities_helper.rb": [
+        1,
+        null
+      ],
       "/Users/katefulton/Documents/ADA/BREAK/YesNoMaybe/app/helpers/application_helper.rb": [
         1,
         null
@@ -15,6 +19,43 @@
       ],
       "/Users/katefulton/Documents/ADA/BREAK/YesNoMaybe/app/helpers/users_helper.rb": [
         1,
+        null
+      ],
+      "/Users/katefulton/Documents/ADA/BREAK/YesNoMaybe/app/controllers/activities_controller.rb": [
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        2,
+        2,
+        2,
+        null,
+        0,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/katefulton/Documents/ADA/BREAK/YesNoMaybe/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        0,
+        null,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null,
         null
       ],
       "/Users/katefulton/Documents/ADA/BREAK/YesNoMaybe/app/controllers/password_resets_controller.rb": [
@@ -42,26 +83,6 @@
         null,
         0,
         null,
-        null,
-        null,
-        null
-      ],
-      "/Users/katefulton/Documents/ADA/BREAK/YesNoMaybe/app/controllers/application_controller.rb": [
-        1,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1,
-        null,
-        1,
-        0,
-        null,
-        1,
-        null,
-        1,
-        0,
         null,
         null,
         null
@@ -153,12 +174,12 @@
         1,
         1,
         null,
-        1,
+        3,
         null,
         1,
         null,
-        0,
-        0,
+        2,
+        2,
         null,
         null,
         1,
@@ -171,6 +192,6 @@
         null
       ]
     },
-    "timestamp": 1419452464
+    "timestamp": 1419453518
   }
 }
