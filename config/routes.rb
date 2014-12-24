@@ -2,12 +2,15 @@ Rails.application.routes.draw do
 
   root 'home#index'
   get 'signup', to: 'users#new', as: :signup
-  post '/users', to: 'users#create'
-  get '/users/:id', to: 'users#show', as: :user
+  post 'users', to: 'users#create'
+  get 'users/:id', to: 'users#show', as: :user
   get 'login', to: 'sessions#new', as: :login
-  post '/sessions', to: 'sessions#create', as: :sessions
+  post 'sessions', to: 'sessions#create', as: :sessions
   delete 'logout', to: 'sessions#destroy', as: :logout
+  get 'reset_password', to: 'password_resets#new', as: :password_resets
+  post 'reset_password', to: 'password_resets#create'
 
+  #resources :password_resets
   #resources :users
   #resources :sessions
   # The priority is based upon order of creation: first created -> highest priority.
