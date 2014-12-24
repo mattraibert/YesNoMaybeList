@@ -1,5 +1,6 @@
-Sign Up
+<h2>Sign Up</h2>
 
+<div>
 <%= form_for @user do |f| %>
   <% if @user.errors.any? %>
     <% @user.errors.full_messages.each do |message| %>
@@ -11,3 +12,4 @@ Sign Up
   <%= f.password_field :password_confirmation %>
   <%= f.submit %>
 <% end %>
+</div>
