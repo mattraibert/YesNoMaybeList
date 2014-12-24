@@ -15,7 +15,7 @@
 //= require_tree .
 
 
-//SESSIONS: Password Reset
+// SESSIONS: Password Reset
 
 $(function() {
   $(".reset-password").click(function(event) {

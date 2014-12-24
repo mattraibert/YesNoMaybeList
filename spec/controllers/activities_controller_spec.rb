@@ -8,13 +8,23 @@ RSpec.describe ActivitiesController, :type => :controller do
   describe "POST create" do
     it "creates a new activity in database" do
       admin_user
+      current_user = admin_user #not sure why this is failing
 
       expect {
         post :create, {activity:{name: "massage oil"}}
       }.to change{Activity.count}.by(1)
     end
 
-    it "only admins can add activities to database" do
+    # it "can create multiple activities in database" do
+    #   admin_user
+    #   current_user = admin_user
+    #
+    #   expect {
+    #     post :create, {activity:{name: "massage oil", "kissing"}}
+    #   }.to change{Activity.count}.by(2)
+    # end
+
+    it "non-admin users cannot add activities to database" do
       user
 
       expect {

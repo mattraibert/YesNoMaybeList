@@ -19,4 +19,7 @@ class User < ActiveRecord::Base
     UserMailer.password_reset(self).deliver
   end
 
+  def user_is_admin?
+    self.admin
+  end
 end
