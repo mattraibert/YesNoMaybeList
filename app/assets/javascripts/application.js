@@ -13,3 +13,23 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+
+//SESSIONS: Password Reset
+
+$(function() {
+  $(".reset-password").click(function(event) {
+    event.preventDefault();
+    //hard coded stuff in form??
+    var resetPasswordForm = '<div><form accept-charset="UTF-8" action="/reset_password" method="post"><div style="display:none"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="hnR+Y3/CAJa9trXUdZWLfQw6LkKHPO39/k6+g/Z0gjc="></div><input id="email" name="email" type="text" oldautocomplete="remove" autocomplete="off"><input name="commit" type="submit" value="Reset Password"></form><a href="#" class="remove-field">Close</a></div>';
+    $(".reset-password").hide();//change .reset-password class to make inactive
+    $(".password-form").append(resetPasswordForm);
+
+    $(".password-form").on("click", ".remove-field", function(event) {
+    event.preventDefault();
+
+    $(this).parent('div').remove();
+    $(".reset-password").show();
+    });
+  });
+});
