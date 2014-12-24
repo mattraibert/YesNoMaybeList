@@ -33,6 +33,17 @@
         0,
         null,
         null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null,
         null
       ],
       "/Users/katefulton/Documents/ADA/BREAK/YesNoMaybe/app/controllers/application_controller.rb": [
@@ -130,6 +141,11 @@
         null,
         null
       ],
+      "/Users/katefulton/Documents/ADA/BREAK/YesNoMaybe/app/models/activity.rb": [
+        1,
+        1,
+        null
+      ],
       "/Users/katefulton/Documents/ADA/BREAK/YesNoMaybe/app/models/user.rb": [
         1,
         1,
@@ -155,6 +171,6 @@
         null
       ]
     },
-    "timestamp": 1419406756
+    "timestamp": 1419452237
   }
 }
