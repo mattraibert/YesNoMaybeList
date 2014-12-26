@@ -7,37 +7,34 @@ RSpec.describe ActivitiesController, :type => :controller do
 
   describe "POST create" do
     it "creates a new activity in database" do
-      admin_user
-      current_user = admin_user #not sure why this is failing
-      print current_user.user_is_admin?
+      sign_in_as(admin_user)
 
       expect {
-        post :create, {activity:{name: "massage oil"}}
+        post :create, {activity:{name: ["massage oil"]}}
       }.to change{Activity.count}.by(1)
     end
 
-    # it "can create multiple activities in database" do
-    #   admin_user
-    #   current_user = admin_user
-    #
-    #   expect {
-    #     post :create, {activity:{name: "massage oil", "kissing"}}
-    #   }.to change{Activity.count}.by(2)
-    # end
-
-    it "non-admin users cannot add activities to database" do
-      user
+    it "can create multiple activities in database" do
+      sign_in_as(admin_user)
 
       expect {
-        post :create, {activity:{name: "massage oil"}}
+        post :create, {activity:{name: ["massage oil", "kissing"]}}
+      }.to change{Activity.count}.by(2)
+    end
+
+    it "non-admin users cannot add activities to database" do
+      sign_in_as(user)
+
+      expect {
+        post :create, {activity:{name: ["massage oil"]}}
       }.to change{Activity.count}.by(0)
     end
   end
 
   describe "POST destroy" do
     it "removes an activity from database" do
-      admin_user
-      current_user = admin_user
+      activity
+      sign_in_as(admin_user)
 
       expect {
         post :destroy, {id: activity.id}
