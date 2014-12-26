@@ -1,7 +1,7 @@
 <h2>Manage Activities</h2>
 
 <% @activities.each do |activity| %>
-  <%= activity.name %>
+  <%= activity.name %><%= button_to "Delete", {:action => 'destroy', :id => activity.id}, method: :delete %> 
 <% end %>
 
 

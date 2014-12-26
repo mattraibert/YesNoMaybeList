@@ -9,6 +9,7 @@ RSpec.describe ActivitiesController, :type => :controller do
     it "creates a new activity in database" do
       admin_user
       current_user = admin_user #not sure why this is failing
+      print current_user.user_is_admin?
 
       expect {
         post :create, {activity:{name: "massage oil"}}
@@ -33,5 +34,14 @@ RSpec.describe ActivitiesController, :type => :controller do
     end
   end
 
+  describe "POST destroy" do
+    it "removes an activity from database" do
+      admin_user
+      current_user = admin_user
 
+      expect {
+        post :destroy, {id: activity.id}
+      }.to change{Activity.count}.by(-1)
+    end
+  end
 end

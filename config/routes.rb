@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   #ACTIVITIES
   get 'activities',             to: 'activities#index',           as: :activities
   post 'activities',            to: 'activities#create',          as: :add_activity
-
+  delete 'activities',          to: 'activities#destroy',         as: :remove_activity
   #resources :password_resets
   #resources :users
   #resources :sessions
