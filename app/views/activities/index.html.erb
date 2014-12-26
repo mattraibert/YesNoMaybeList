@@ -1,0 +1,14 @@
+<h2>Manage Activities</h2>
+
+<% @activities.each do |activity| %>
+  <%= activity.name %><%= button_to "Delete", {:action => 'destroy', :id => activity.id}, method: :delete %> 
+<% end %>
+
+
+<div id="add-field">Add another field</div>
+<div class="input-field">
+<%= form_for @activity do |f| %>
+</div>
+
+  <%= f.submit "Add" %>
+<% end %>

@@ -75,4 +75,8 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  #In order for URLs to work inside mailers
+  #config.action_mailer.default_url_options = { :host => "CUSTOM_DOMAIN_TBD" }
+
 end

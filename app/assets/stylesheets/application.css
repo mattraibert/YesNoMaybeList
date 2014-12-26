@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+
+.gray-back {
+  opacity: .5;
+  /*make inactive? */
+}
