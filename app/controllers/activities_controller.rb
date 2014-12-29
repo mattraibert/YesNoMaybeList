@@ -16,7 +16,7 @@ class ActivitiesController < ApplicationController
       end
     end
 
-    if failed_saves >= 1
+    if !failed_saves.empty?
       redirect_to activities_path, notice: "Unable to save #{failed_saves.join(", ")}."
     else
       redirect_to activities_path
@@ -33,7 +33,7 @@ class ActivitiesController < ApplicationController
   end
 
   private
-  
+
   def require_admin
     unless current_user.user_is_admin?
       flash[:error] = "Only admin can add to main activity database"

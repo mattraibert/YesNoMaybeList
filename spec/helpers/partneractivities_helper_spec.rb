@@ -1,15 +1,15 @@
 require 'rails_helper'
 
 # Specs in this file have access to a helper object that includes
-# the PasswordResetsHelper. For example:
+# the PartneractivitiesHelper. For example:
 #
-# describe PasswordResetsHelper do
+# describe PartneractivitiesHelper do
 #   describe "string concat" do
 #     it "concats two strings with spaces" do
 #       expect(helper.concat_strings("this","that")).to eq("this that")
 #     end
 #   end
 # end
-RSpec.describe PasswordResetsHelper, :type => :helper do
-
+RSpec.describe PartneractivitiesHelper, :type => :helper do
+  pending "add some examples to (or delete) #{__FILE__}"
 end

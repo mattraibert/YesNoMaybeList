@@ -7,8 +7,10 @@
       <%= message %>
     <% end %>
   <% end %>
-  <%= f.password_field :password %>
-  <%= f.password_field :password_confirmation %>
+  <%= f.password_field :password, placeholder: "New Password" %>
+  <%= f.password_field :password_confirmation, placeholder: "Password Confirmation" %>
+  <%= f.hidden_field :token, :value => params[:id]%>
   <%= f.submit "Update Password" %>
 <% end %>
 </div>
+

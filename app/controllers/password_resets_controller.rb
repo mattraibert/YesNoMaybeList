@@ -4,21 +4,23 @@ class PasswordResetsController < ApplicationController
   end
 
   def create
-    user = User.find_by(email: params[:email])
+    user = User.find_by_email(params[:email])
     user.send_password_reset if user
-    redirect_to root_path
+    redirect_to root_url, :notice => "Email sent to reset password."
   end
 
   def edit
-    @user = User.find_by(password_reset_token!: params[:id])
+    @user = User.find_by_password_reset_token!(params[:id])
   end
 
   def update
-    @user = User.find_by(password_reset_token!: params[:id])
+    @user = User.find_by_password_reset_token!(params[:user][:token])
     if @user.password_reset_sent_at < 2.hours.ago
+      raise
       redirect_to password_reset_path
-    elsif @user.update_attributes
-      redirect_to user_path(@user.id)
+    elsif @user.update_attributes(params.require(:user).permit(:password, :password_confirmation))
+      cookies[:auth_token] = @user.auth_token
+      redirect_to user_path(current_user.id)
     else
       render :edit
     end

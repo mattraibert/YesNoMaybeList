@@ -1,1 +1,12 @@
-<h2><%= @user.email %> Profile Page</h2>
+<h2><%= @user.name %>'s Profile Page</h2>
+
+
+<h3>Current Lists:</h3>
+
+
+<h3>Start a List:</h3>
+<%= button_to "Create New List", new_list_path %>
+<!--<%#= form_for @new_list do |f| %>
+    <%#= text_field_tag :name, params[:name] %>
+    <%#= f.submit "Create New List", new_list_path %><%# end %>-->
+

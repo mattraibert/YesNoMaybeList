@@ -86,3 +86,5 @@ RSpec.configure do |config|
   Kernel.srand config.seed
 =end
 end
+
+require File.join(File.dirname(__FILE__), 'support/utility_methods')

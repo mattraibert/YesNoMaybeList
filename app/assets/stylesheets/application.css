@@ -14,7 +14,63 @@
  *= require_self
  */
 
+body {
+  font-size: 100%;
+  font-color: #444;
+}
+
+h1 {
+  font-size: 150%;
+}
+
+h2 {
+  font-size: 125%;
+}
+
+h3 {
+  font-size: 100%;
+}
 .gray-back {
   opacity: .5;
   /*make inactive? */
+}
+
+/* LOG IN */
+.reset-box-style {
+  background-color: orangered;
+  padding: 10%;
+  margin: 10%;
+}
+
+/* LINKS */
+a {
+  color: orangered;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  color: black;
+}
+
+/* BUTTONS */
+
+.btn {
+  width:15%;
+  height:25%;
+  border-radius: 10%;
+  font-size: 80%;
+  display:inline;
+  border: 1px solid orangered;
+  background-color: orangered;
+  color: white;
+}
+
+.btn:hover, .btn:focus {
+  background-color: white;
+  color: orangered;
+  border: 1px solid orangered;
+}
+/* TABLES */
+thead {
+  font-size: 80%;
 }

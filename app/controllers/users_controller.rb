@@ -15,13 +15,15 @@ class UsersController < ApplicationController
   end
 
   def show
+    @new_list = List.new
+    #@lists = Lists associated with user through relationships
     @user = User.find(current_user.id)
   end
 
   private
 
   def user_params
-    params.require(:user).permit(:email, :password, :password_confirmation)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
 
 end
