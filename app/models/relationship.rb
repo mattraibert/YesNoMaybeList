@@ -1,5 +1,5 @@
 class Relationship < ActiveRecord::Base
   has_many :users
-  has_many :lists
+  belongs_to :lists
 
 end
