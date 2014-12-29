@@ -17,4 +17,7 @@ class ListsController < ApplicationController
     @list = List.find(params[:id])
     @activities = Activity.all
   end
+
+  def destroy
+  end
 end

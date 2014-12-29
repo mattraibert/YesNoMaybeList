@@ -1,0 +1,2 @@
+class PartneractivitiesController < ApplicationController
+end
