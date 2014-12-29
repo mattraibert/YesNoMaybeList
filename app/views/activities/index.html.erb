@@ -1,10 +1,11 @@
 <h2>Manage Activities</h2>
 
+<h3>Delete Activities</h3>
 <% @activities.each do |activity| %>
-  <%= activity.name %><%= button_to "Delete", {:action => 'destroy', :id => activity.id}, method: :delete %> 
+  <%= activity.name %> <%= button_to "Delete", {:action => 'destroy', :id => activity.id}, method: :delete, class: "btn" %>
 <% end %>
 
-
+<h3>Add Activities</h3>
 <div id="add-field">Add another field</div>
 <div class="input-field">
 <%= form_for @activity do |f| %>

@@ -27,6 +27,11 @@ Rails.application.routes.draw do
   #LISTS
   post 'lists',                         to: 'lists#create',               as: :new_list
   get 'lists/:id',                      to: 'lists#show',                 as: :list
+
+  #PARTNERACTIVITIES
+  get 'activity',                       to: 'partneractivities#new',      as: :new_partneractivity
+  post 'partneractivities',             to: 'partneractivities#create',   as: :create_partneractivity
+
   #resources :password_resets
   #resources :users
   #resources :sessions

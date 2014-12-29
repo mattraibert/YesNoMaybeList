@@ -24,7 +24,7 @@
 </table>
 
 <% @activities.each do |activity| %>
-    <%=activity.name %>
+    <%= link_to activity.name, new_partneractivity_path(activity) %>
 <% end %>
 
 
