@@ -15,6 +15,7 @@ class ListsController < ApplicationController
 
   def show
     @list = List.find(params[:id])
+    @partners = User.partners(params[:id])
     @activities = Activity.all
   end
 

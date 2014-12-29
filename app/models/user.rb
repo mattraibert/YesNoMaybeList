@@ -22,6 +22,13 @@ class User < ActiveRecord::Base
     UserMailer.password_reset(self).deliver
   end
 
+  def self.partners(list_id)
+    @relationships = Relationship.where(list_id: list_id)
+    @relationships.collect do |relationship|
+      User.find(relationship.user_id)
+    end
+  end
+
   def user_is_admin?
     self.admin
   end

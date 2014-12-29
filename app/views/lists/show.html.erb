@@ -1,11 +1,24 @@
-<h2>@list.name</h2>
+<% @partners.each do |partner| %>
+    <h2><%= partner.email %></h2>
+<% end %>
 
 <!-- show only if one user is associated with the list allow to invite another user to join list -->
 <h3>Invite someone to the list!</h3>
 
+<table>
+  <thead>
+    <tr>
+      <td>Yes</td>
+      <td>No</td>
+      <td>Maybe</td>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
 
 <% @activities.each do |activity| %>
-    <%="activity.name" %>
+    <%=activity.name %>
 <% end %>
 
 
