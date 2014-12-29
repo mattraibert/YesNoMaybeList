@@ -14,11 +14,13 @@ class PasswordResetsController < ApplicationController
   end
 
   def update
-    @user = User.find_by_password_reset_token!(params[:id])
+    @user = User.find_by_password_reset_token!(params[:user][:token])
     if @user.password_reset_sent_at < 2.hours.ago
+      raise
       redirect_to password_reset_path
-    elsif @user.update_attributes(params[:user])
-      redirect_to user_path(@user.id)
+    elsif @user.update_attributes(params.require(:user).permit(:password, :password_confirmation))
+      cookies[:auth_token] = @user.auth_token
+      redirect_to user_path(current_user.id)
     else
       render :edit
     end
