@@ -1,7 +1,7 @@
 <h2>Reset Password</h2>
 
 <div>
-<%= form_for @user, :url => password_reset_path(params[:id]) do |f| %>
+<%= form_for @user, :url => password_reset_path(params[:token]) do |f| %>
   <% if @user.errors.any? %>
     <% for message in @user.errors.full_messages %>
       <%= message %>

@@ -15,7 +15,9 @@ Rails.application.routes.draw do
   #PASSWORDS
   get 'reset_password',                 to: 'password_resets#new',        as: :password_reset
   post 'reset_password',                to: 'password_resets#create'
-  get 'reset_password/edit/:token',     to: 'password_resets#edit',       as: :edit_password_reset
+  patch 'reset_password',               to: 'password_resets#update'
+  get 'reset_password/:id/edit',        to: 'password_resets#edit',       as: :edit_password_reset
+
 
   #ACTIVITIES
   get 'activities',                     to: 'activities#index',           as: :activities
