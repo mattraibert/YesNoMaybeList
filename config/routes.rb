@@ -24,6 +24,9 @@ Rails.application.routes.draw do
   post 'activities',                    to: 'activities#create',          as: :add_activity
   delete 'activities',                  to: 'activities#destroy',         as: :remove_activity
 
+  #LISTS
+  post 'lists',                         to: 'lists#create',               as: :new_list
+  get 'lists/:id',                      to: 'lists#show',                 as: :list
   #resources :password_resets
   #resources :users
   #resources :sessions

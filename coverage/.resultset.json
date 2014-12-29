@@ -9,6 +9,10 @@
         1,
         null
       ],
+      "/Users/katefulton/Documents/ADA/BREAK/YesNoMaybe/app/helpers/lists_helper.rb": [
+        1,
+        null
+      ],
       "/Users/katefulton/Documents/ADA/BREAK/YesNoMaybe/app/helpers/password_resets_helper.rb": [
         1,
         null
@@ -82,6 +86,27 @@
         null,
         1,
         0,
+        null,
+        null,
+        null
+      ],
+      "/Users/katefulton/Documents/ADA/BREAK/YesNoMaybe/app/controllers/lists_controller.rb": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        null,
+        0,
+        null,
+        null,
+        null,
+        1,
         null,
         null,
         null
@@ -195,6 +220,14 @@
         1,
         null
       ],
+      "/Users/katefulton/Documents/ADA/BREAK/YesNoMaybe/app/models/list.rb": [
+        1,
+        null
+      ],
+      "/Users/katefulton/Documents/ADA/BREAK/YesNoMaybe/app/models/relationship.rb": [
+        1,
+        null
+      ],
       "/Users/katefulton/Documents/ADA/BREAK/YesNoMaybe/app/models/user.rb": [
         1,
         1,
@@ -202,12 +235,12 @@
         1,
         1,
         null,
-        7,
+        9,
         null,
         1,
         null,
-        6,
-        6,
+        8,
+        8,
         null,
         null,
         1,
@@ -223,6 +256,6 @@
         null
       ]
     },
-    "timestamp": 1419628864
+    "timestamp": 1419876916
   }
 }
