@@ -2,8 +2,8 @@
 
 <div class="log-in">
 <%= form_tag sessions_path do %>
-  <%= text_field_tag :email, params[:email] %>
-  <%= password_field_tag :password, params[:password] %>
+  <%= text_field_tag :email, params[:email], placeholder: "Email" %>
+  <%= password_field_tag :password, params[:password], placeholder: "Password" %>
   <%= check_box_tag :remember_me, 1, params[:remember_me] %>
   <%= link_to "Forgot Password?", password_reset_path, class: "reset-password" %>
   <%= submit_tag "Log In" %>

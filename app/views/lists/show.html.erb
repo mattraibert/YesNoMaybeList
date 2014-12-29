@@ -4,7 +4,12 @@
 <% end %>
 
 <!-- show only if one user is associated with the list allow to invite another user to join list -->
-<h3>Invite someone to the list!</h3>
+<h3>Invite your partner!</h3>
+<%= form_tag password_reset_path, method: :post do %>
+    <%= text_field_tag :email, params[:email], placeholder: "Partner's Email" %>
+    <%= submit_tag "Invite Partner" %>
+<% end %>
+
 
 <table>
   <thead>
