@@ -35,6 +35,12 @@ h3 {
   /*make inactive? */
 }
 
+/* LOG IN */
+.reset-box-style {
+  background-color: orangered;
+  padding: 10%;
+}
+
 /* LINKS */
 a {
   color: orangered;
