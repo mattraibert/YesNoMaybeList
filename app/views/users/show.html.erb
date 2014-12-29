@@ -1,1 +1,11 @@
 <h2><%= @user.email %> Profile Page</h2>
+
+<h3>Your Yes, No, Maybe Lists</h3>
+
+
+<h3>Start New Yes, No, Maybe List</h3>
+<%= button_to "Create New List", new_list_path %>
+<!--<%#= form_for @new_list do |f| %>
+    <%#= text_field_tag :name, params[:name] %>
+    <%#= f.submit "Create New List", new_list_path %><%# end %>-->
+

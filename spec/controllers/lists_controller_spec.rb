@@ -35,4 +35,8 @@ RSpec.describe ListsController, :type => :controller do
   describe "GET show" do
 
   end
+
+  describe "POST destroy" do
+
+  end
 end
