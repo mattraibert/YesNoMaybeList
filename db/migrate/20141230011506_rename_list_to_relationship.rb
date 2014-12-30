@@ -1,5 +1,5 @@
 class RenameListToRelationship < ActiveRecord::Migration
   def change
-    table_name :lists, :relationships
+    rename_table :lists, :relationships
   end
 end
