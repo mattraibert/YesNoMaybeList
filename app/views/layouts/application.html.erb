@@ -10,7 +10,6 @@
 </head>
 <body>
   <header>
-    <h1>The Yes, No, Maybe List</h1>
     <nav>
         <% if current_user %>
           Logged in as <%= current_user.email%>
@@ -20,6 +19,7 @@
           <%= link_to "Log In", login_path %>
         <% end %>
     </nav>
+    <h1>The Yes, No, Maybe List</h1>
   </header>
 
 <%= yield %>
