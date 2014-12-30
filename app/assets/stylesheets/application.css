@@ -18,6 +18,14 @@ body {
   font-size: 100%;
   font-color: #444;
   font-family: 'Cedarville Cursive', cursive;
+  /*background-image: url(wood-table.jpg);*/
+}
+
+.paper {
+  background-image: url(lined-paper-background-yellow.jpg);
+  background-size: 100%;
+  width: 60%;
+  min-height: 2000px;
 }
 
 h1 {

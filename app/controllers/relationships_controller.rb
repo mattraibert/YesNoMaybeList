@@ -14,9 +14,10 @@ class RelationshipsController < ApplicationController
   end
 
   def show
+    #bug with user_relationship here
     @relationship = Relationship.find(params[:id])
     @partners = User.partners(params[:id])
-    @answers = Answer.all
+    @answers = Answer.where(user_relationship_id: params[:id])
     @activities = Activity.all #all activities that haven't been answered: Activity.where.not(name:
   end
 
