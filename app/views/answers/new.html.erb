@@ -1,4 +1,13 @@
 <h2><%= @activity_name %></h2>
-<%= form_for @answer do |f| %>
-
+<%= form_for @answer, url: create_answer_path, method: :post do |f| %>
+    <%= f.label :yes %>
+    <%= f.radio_button(:status, "yes") %>
+    <%= f.label :no %>
+    <%= f.radio_button(:status, "no") %>
+    <%= f.label :maybe %>
+    <%= f.radio_button(:status, "maybe") %>
+    <%= f.label :notes_go_here %>
+    <%= f.text_area :notes %>
+    <%= f.hidden_field :name, :value => @activity_name %>
+    <%= f.submit :submit %>
 <% end %>

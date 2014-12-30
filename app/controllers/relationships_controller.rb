@@ -1,11 +1,12 @@
 class RelationshipsController < ApplicationController
 
   def create
-    list = Relationship.new
-    if list.save
-      relationship = UserRelationship.new
-      relationship.user_id = current_user.id
-      relationship.save!
+    relationship = Relationship.new
+    if relationship.save
+      user_relationship = UserRelationship.new
+      user_relationship.user_id = current_user.id
+      user_relationship.relationship_id = relationship.id
+      user_relationship.save!
       redirect_to relationship_path(relationship.id)
     else
       redirect_to user_path(current_user.id)
@@ -15,7 +16,8 @@ class RelationshipsController < ApplicationController
   def show
     @relationship = Relationship.find(params[:id])
     @partners = User.partners(params[:id])
-    @activities = Activity.all
+    @answers = Answer.all
+    @activities = Activity.all #all activities that haven't been answered: Activity.where.not(name:
   end
 
   def destroy

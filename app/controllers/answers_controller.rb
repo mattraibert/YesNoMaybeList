@@ -7,14 +7,12 @@ class AnswersController < ApplicationController
   end
 
   def create
-    @activity = Activity.find(activity.id)
-    @answer = Answer.new
-    @answer.name = activity.name
+    @answer = Answer.new(params.require(:answer).permit(:name, :notes, :status))
     @answer.user_id = current_user.id
     if @answer.save
       redirect_to relationship_path
     else
-      redirect_to
+      redirect_to relationship_path
     end
   end
 
