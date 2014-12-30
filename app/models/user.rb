@@ -21,8 +21,8 @@ class User < ActiveRecord::Base
     UserMailer.password_reset(self).deliver
   end
 
-  def self.partners(list_id)
-    @relationships = UserRelationship.where(list_id: list_id)
+  def self.partners(relationship_id)
+    @relationships = UserRelationship.where(relationship_id: relationship_id)
     @relationships.collect do |relationship|
       User.find(relationship.user_id)
     end

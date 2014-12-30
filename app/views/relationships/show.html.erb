@@ -10,7 +10,6 @@
     <%= submit_tag "Invite Partner" %>
 <% end %>
 
-
 <table>
   <thead>
     <tr>
@@ -24,7 +23,7 @@
 </table>
 
 <% @activities.each do |activity| %>
-    <%= link_to activity.name, new_partneractivity_path(activity) %>
+    <%= link_to activity.name, new_answer_path %>
 <% end %>
 
 

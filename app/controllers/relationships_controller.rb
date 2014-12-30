@@ -5,9 +5,8 @@ class RelationshipsController < ApplicationController
     if list.save
       relationship = UserRelationship.new
       relationship.user_id = current_user.id
-      relationship.list_id = list.id
       relationship.save!
-      redirect_to list_path(list.id)
+      redirect_to relationship_path(relationship.id)
     else
       redirect_to user_path(current_user.id)
     end

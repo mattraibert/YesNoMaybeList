@@ -17,19 +17,22 @@
 body {
   font-size: 100%;
   font-color: #444;
+  font-family: 'Cedarville Cursive', cursive;
 }
 
 h1 {
   font-size: 150%;
-  font-family: 'Leckerli One', cursive;
+  font-family: Futura, Helvetica;
 }
 
 h2 {
   font-size: 125%;
+  font-family: Futura, Helvetica;
 }
 
 h3 {
   font-size: 100%;
+  font-family: Futura, Helvetica;
 }
 .gray-back {
   opacity: .5;
@@ -57,19 +60,19 @@ a:hover, a:focus {
 
 .btn {
   width:15%;
-  height:25%;
+  height:55%;
   border-radius: 10%;
   font-size: 80%;
   display:inline;
-  border: 1px solid orangered;
-  background-color: orangered;
+  background: linear-gradient(to right,#C72B0C,#BD2716);
+  border: none;
   color: white;
 }
 
 .btn:hover, .btn:focus {
-  background-color: white;
-  color: orangered;
-  border: 1px solid orangered;
+  background: linear-gradient(to right,#C7901C,orange);
+  color: white;
+  border: none;
 }
 /* TABLES */
 thead {

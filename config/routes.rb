@@ -24,13 +24,19 @@ Rails.application.routes.draw do
   post 'activities',                    to: 'activities#create',          as: :add_activity
   delete 'activities',                  to: 'activities#destroy',         as: :remove_activity
 
-  #LISTS
-  post 'lists',                         to: 'lists#create',               as: :new_list
-  get 'lists/:id',                      to: 'lists#show',                 as: :relationship
+  #RELATIONSHIPS
+  post 'relationships',                 to: 'relationships#create',       as: :new_relationship
+  get 'relationships/:id',              to: 'relationships#show',         as: :relationship
 
-  #PARTNERACTIVITIES
-  get 'activity',                       to: 'partneractivities#new',      as: :new_partneractivity
-  post 'partneractivities',             to: 'partneractivities#create',   as: :create_partneractivity
+  #ANSWERS
+  get 'answers/:id',                    to: 'answers#new',                 as: :new_answer
+  post 'answers/:id',                   to: 'answers#create',              as: :create_answer
+  get 'answers/:id',                    to: 'answers#show',                as: :answer
+  patch 'answers/:id',                  to: 'answers#update',              as: :update_answer
+  delete 'answers/:id',                 to: 'answers#destroy',             as: :delete_answer
+
+
+
 
   #resources :password_resets
   #resources :users
