@@ -1,7 +1,6 @@
 class User < ActiveRecord::Base
   has_secure_password
-  belongs_to :user_relationship
-  has_many :lists, through: :UserRelationship
+  has_many :user_relationships
 
   #attr_accessible :email, :password, :password_confirmation
   validates :email, presence: true, uniqueness: true

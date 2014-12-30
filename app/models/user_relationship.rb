@@ -1,5 +1,5 @@
 class UserRelationship < ActiveRecord::Base
-  has_many :users
-  belongs_to :lists
-
+  belongs_to :user
+  belongs_to :relationship
+  belongs_to :answers
 end

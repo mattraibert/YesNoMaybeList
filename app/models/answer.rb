@@ -1,4 +1,4 @@
 class Answer < ActiveRecord::Base
-  belongs_to :user
-  belongs_to :relationship
+  has_many :activities
+  belongs_to :user_relationship
 end

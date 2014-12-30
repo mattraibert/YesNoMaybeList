@@ -1,5 +1,5 @@
 class Relationship < ActiveRecord::Base
-  belongs_to :user_relationship
-  #belongs_to :user, through: :relationships - TALK THIS THROUGH
+  has_many :user_relationships
+
 
 end
