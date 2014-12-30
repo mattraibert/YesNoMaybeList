@@ -24,20 +24,11 @@ Rails.application.routes.draw do
   post 'activities',                    to: 'activities#create',          as: :add_activity
   delete 'activities',                  to: 'activities#destroy',         as: :remove_activity
 
-  #RELATIONSHIPS
-  post 'relationships',                 to: 'relationships#create',       as: :new_relationship
-  get 'relationships/:id',              to: 'relationships#show',         as: :relationship
+  resources :relationships, only: [:create, :show], shallow: true
 
-  #ANSWERS
-  get 'answers/:id',                    to: 'answers#new',                 as: :new_answer
-  post 'answers/:id',                   to: 'answers#create',              as: :create_answer
-  get 'answers/:id',                    to: 'answers#show',                as: :answer
-  patch 'answers/:id',                  to: 'answers#update',              as: :update_answer
-  delete 'answers/:id',                 to: 'answers#destroy',             as: :delete_answer
-
-
-
-
+  resources :activities, only: [:index, :create, :destroy], shallow: true do
+    resources :answers, only: [:new, :create, :show, :update, :destroy]
+  end
   #resources :password_resets
   #resources :users
   #resources :sessions

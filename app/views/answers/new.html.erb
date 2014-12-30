@@ -1,6 +1,6 @@
-<h2><%= @activity_name %></h2>
+<h2><%= @activity.name %></h2>
 
-<%= form_for @answer, url: create_answer_path, method: :post do |f| %>
+<%= form_for @answer, url: activity_answers_path(@activity), method: :post do |f| %>
     <div>
     <%= f.radio_button(:status, "yes") %>
     <%= f.label :yes %>
@@ -12,6 +12,6 @@
 
     <div><%= f.label :notes_go_here %></div>
     <div><%= f.text_area :notes %></div>
-    <%= f.hidden_field :name, :value => @activity_name %>
+    <%= f.hidden_field :name, :value => @activity.name %>
     <%= f.submit :submit, class: "btn" %>
 <% end %>
