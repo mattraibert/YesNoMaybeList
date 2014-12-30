@@ -26,7 +26,7 @@ Rails.application.routes.draw do
 
   #LISTS
   post 'lists',                         to: 'lists#create',               as: :new_list
-  get 'lists/:id',                      to: 'lists#show',                 as: :list
+  get 'lists/:id',                      to: 'lists#show',                 as: :relationship
 
   #PARTNERACTIVITIES
   get 'activity',                       to: 'partneractivities#new',      as: :new_partneractivity

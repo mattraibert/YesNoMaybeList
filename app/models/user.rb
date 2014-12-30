@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   has_secure_password
-  belongs_to :relationship
-  has_many :lists, through: :relationships
+  belongs_to :user_relationship
+  has_many :lists, through: :UserRelationship
 
   #attr_accessible :email, :password, :password_confirmation
   validates :email, presence: true, uniqueness: true
@@ -23,7 +23,7 @@ class User < ActiveRecord::Base
   end
 
   def self.partners(list_id)
-    @relationships = Relationship.where(list_id: list_id)
+    @relationships = UserRelationship.where(list_id: list_id)
     @relationships.collect do |relationship|
       User.find(relationship.user_id)
     end

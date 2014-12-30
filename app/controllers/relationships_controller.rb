@@ -1,9 +1,9 @@
-class ListsController < ApplicationController
+class RelationshipsController < ApplicationController
 
   def create
-    list = List.new
+    list = Relationship.new
     if list.save
-      relationship = Relationship.new
+      relationship = UserRelationship.new
       relationship.user_id = current_user.id
       relationship.list_id = list.id
       relationship.save!
@@ -14,7 +14,7 @@ class ListsController < ApplicationController
   end
 
   def show
-    @list = List.find(params[:id])
+    @relationship = Relationship.find(params[:id])
     @partners = User.partners(params[:id])
     @activities = Activity.all
   end
